@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
+import androidx.core.view.isEmpty
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -25,6 +27,8 @@ class MainActivity : AppCompatActivity(), GroceryRVAdapter.GroceryItemClickInter
         setContentView(R.layout.activity_main)
         itemsRV = findViewById(R.id.idRVitems)
         addFab = findViewById(R.id.FABadd)
+
+
         list=ArrayList<GroceryItems>()
         groceryRVAdapter= GroceryRVAdapter(list,this)
         itemsRV.layoutManager=LinearLayoutManager(this)
